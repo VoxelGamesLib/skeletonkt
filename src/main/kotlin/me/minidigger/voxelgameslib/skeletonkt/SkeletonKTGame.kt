@@ -8,7 +8,7 @@ import com.voxelgameslib.voxelgameslib.game.GameInfo
 import com.voxelgameslib.voxelgameslib.phase.phases.GracePhase
 import com.voxelgameslib.voxelgameslib.phase.phases.LobbyWithVotePhase
 
-@GameInfo(name = "Example", author = "Sxtanna", version = "v1.0", description = "Example description")
+@GameInfo(name = "SkeletonKTGame", author = "MiniDigger", version = "v1.0", description = "SkeletonKTGame description")
 class SkeletonKTGame : AbstractGame(SkeletonKTPlugin.GAMEMODE) {
 
     override fun initGameFromModule() {

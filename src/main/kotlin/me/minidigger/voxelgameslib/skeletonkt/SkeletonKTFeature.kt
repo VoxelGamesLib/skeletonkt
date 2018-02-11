@@ -3,9 +3,11 @@ package me.minidigger.voxelgameslib.skeletonkt
 import com.voxelgameslib.kvgl.*
 import com.voxelgameslib.voxelgameslib.event.GameEvent
 import com.voxelgameslib.voxelgameslib.feature.AbstractFeature
+import com.voxelgameslib.voxelgameslib.feature.FeatureInfo
 import com.voxelgameslib.voxelgameslib.feature.features.TeamFeature
 import org.bukkit.event.entity.PlayerDeathEvent
 
+@FeatureInfo(name = "SkeletonKTFeature", author = "MiniDigger", version = "1.0.0", description = "SkeletonKTFeature description")
 class SkeletonKTFeature : AbstractFeature() {
 
     private val log by logByClass<SkeletonKTFeature>()
