@@ -8,10 +8,10 @@ import com.voxelgameslib.voxelgameslib.feature.features.SpawnFeature
 import com.voxelgameslib.voxelgameslib.feature.features.TeamFeature
 import com.voxelgameslib.voxelgameslib.phase.TimedPhase
 
-class SkeltonKTPhase : TimedPhase() {
+class SkeletonKTPhase : TimedPhase() {
 
     override fun init() {
-        name = "SkeltonKTPhase"
+        name = "SkeletonKTPhase"
         ticks = 2 * 60 * GameConstants.TPS
 
         super.init()

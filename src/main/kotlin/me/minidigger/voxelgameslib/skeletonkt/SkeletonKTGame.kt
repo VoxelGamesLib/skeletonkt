@@ -20,7 +20,7 @@ class SkeletonKTGame : AbstractGame(SkeletonKTPlugin.GAMEMODE) {
 
         buildPhases(votePhase) {
             +createPhase<GracePhase>()
-            +createPhase<SkeltonKTPhase>()
+            +createPhase<SkeletonKTPhase>()
         }
 
         buildPhases {
@@ -28,7 +28,7 @@ class SkeletonKTGame : AbstractGame(SkeletonKTPlugin.GAMEMODE) {
                 it.addFeature(createFeature<TeamSelectFeature>(it))
             }
             +createPhase<GracePhase>()
-            +createPhase<SkeltonKTPhase>()
+            +createPhase<SkeletonKTPhase>()
         }
 
 
