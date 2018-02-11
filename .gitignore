@@ -1,0 +1,16 @@
+# Gradle
+*.gradle/
+build/
+out/
+
+# IDEA
+*.iml
+.idea/
+
+# Java
+*.jar
+
+# JRebel <3
+rebel.xml
+
+pom.xml
