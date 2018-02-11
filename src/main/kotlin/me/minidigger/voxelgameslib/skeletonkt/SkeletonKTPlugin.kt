@@ -12,7 +12,7 @@ class SkeletonKTPlugin : VGLPlugin() {
 
     companion object {
 
-        val GAMEMODE = newGameMode<SkeletonKTGame>("Example")
+        val GAMEMODE = newGameMode<SkeletonKTGame>("SkeletonKT")
 
     }
 
