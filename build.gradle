@@ -1,77 +1,11 @@
-import org.apache.tools.ant.filters.ReplaceTokens
-import org.gradle.api.tasks.Copy
-
-buildscript {
-    ext.kotlin_version = '1.2.21'
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-plugins {
-    id 'maven'
-    id 'com.github.ben-manes.versions' version '0.17.0'
-}
-
-apply plugin: 'kotlin'
-
-defaultTasks 'clean', 'build'
-
-group 'me.minidigger.voxelgameslib.skeleton'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url "https://voxelgameslib.github.io/VoxelGamesLibv2/mvn-repo" }
-    maven { url "https://hub.spigotmc.org/nexus/content/groups/public/" }
-    maven { url "https://oss.sonatype.org/content/groups/public/" }
-    maven { url "https://repo.aikar.co/content/groups/aikar/" }
-    maven { url "https://raw.githubusercontent.com/allanmc/JSkills/mvn-repo/" }
-    maven { url "http://dl.bintray.com/etienne/java-utilities" }
-    maven { url "http://repo.bstats.org/content/repositories/releases/" }
-    maven { url "http://repo.dmulloy2.net/content/groups/public/" }
-    maven { url "http://repo.maven.apache.org/maven2" }
-    maven { url "http://repo.onarandombox.com/content/groups/public/" }
-    maven { url "http://repo.inventivetalent.org/content/repositories/snapshots/" }
-}
-
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compileOnly group: 'com.voxelgameslib', name: 'kvgl', version: '1.0'
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-
-    compileOnly group: 'org.spigotmc', name: 'spigot-api', version: '1.12-R0.1-SNAPSHOT'
-    compileOnly group: 'com.voxelgameslib', name: 'voxelgameslib', version: '2.0-SNAPSHOT', changing: true
-
-}
-
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
-processResources {
-    filter ReplaceTokens, tokens: [
-            'version': project.version
-    ]
+    compileOnly rootProject
+    compileOnly project(':/tools/KVGL')
 }
 
 task copyToServer(dependsOn: 'jar', type: Copy) {
     from 'build/libs/SkeletonKT-1.0-SNAPSHOT.jar'
     into '../testserver/plugins/'
-}
-
-configurations.all {
-    // Check for updates every build
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 
 task createPom() {
