@@ -1,6 +1,6 @@
 dependencies {
     compileOnly project(":VoxelGamesLib")
-    compileOnly project(':/tools/KVGL')
+    compileOnly project(':KVGL')
 }
 
 task copyToServer(dependsOn: 'jar', type: Copy) {
