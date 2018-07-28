@@ -1,6 +1,5 @@
 package me.minidigger.voxelgameslib.skeletonkt
 
-import com.voxelgameslib.kvgl.*
 import com.voxelgameslib.voxelgameslib.module.ModuleInfo
 import com.voxelgameslib.voxelgameslib.plugin.VGLPlugin
 

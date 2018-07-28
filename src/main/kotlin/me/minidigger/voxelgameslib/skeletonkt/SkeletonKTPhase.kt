@@ -1,6 +1,5 @@
 package me.minidigger.voxelgameslib.skeletonkt
 
-import com.voxelgameslib.kvgl.*
 import com.voxelgameslib.voxelgameslib.GameConstants
 import com.voxelgameslib.voxelgameslib.feature.features.GameModeFeature
 import com.voxelgameslib.voxelgameslib.feature.features.MapFeature

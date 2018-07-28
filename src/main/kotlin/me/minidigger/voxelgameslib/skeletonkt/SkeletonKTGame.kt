@@ -1,6 +1,5 @@
 package me.minidigger.voxelgameslib.skeletonkt
 
-import com.voxelgameslib.kvgl.*
 import com.voxelgameslib.voxelgameslib.feature.features.TeamSelectFeature
 import com.voxelgameslib.voxelgameslib.game.AbstractGame
 import com.voxelgameslib.voxelgameslib.game.GameDefinition
